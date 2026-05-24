@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;700&display=swap');
+
+:root {
+    --primary-red: #D32F2F;    /* أحمر حيوي وجذاب */
+    --accent-red: #FF5252;     /* أحمر مضيء للتأثيرات */
+    --bg-gradient: linear-gradient(135deg, #0f0c20 0%, #15102a 50%, #06040a 100%); /* خلفية متدرجة فاخرة */
+    --card-bg: rgba(25, 20, 35, 0.65); /* خلفية شبه شفافة للنموذج */
+    --input-bg: rgba(255, 255, 255, 0.05); /* خانات زجاجية ناعمة */
+    --text-white: #FFFFFF; 
+    --text-muted: #A0A0B0;
+}
+
+body {
+    font-family: 'El Messiri', sans-serif;
+    background: var(--bg-gradient);
+    color: var(--text-white);
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: var(--card-bg); 
+    backdrop-filter: blur(12px); /* تأثير الضباب الزجاجي الفاخر */
+    -webkit-backdrop-filter: blur(12px);
+    max-width: 750px;
+    width: 100%;
+    padding: 45px;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 
+                0 0 40px rgba(211, 47, 47, 0.1); /* توهج خفيف باللون الأحمر */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 6px solid var(--primary-red);
+    box-sizing: border-box;
+}
+
+.header-section {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+h1.main-title {
+    background: linear-gradient(to left, var(--text-white), var(--accent-red));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* عنوان متدرج اللمعان */
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.intro-text {
+    line-height: 1.8;
+    font-size: 15px;
+    color: var(--text-muted);
+    text-align: justify;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+}
+
+.form-subtitle {
+    font-size: 22px;
+    color: var(--text-white);
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+    position: relative;
+}
+
+/* خط ديكوري صغير تحت العنوان الفرعي */
+.form-subtitle::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--primary-red);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.full-width { grid-column: span 2; }
+
+.form-group { margin-bottom: 5px; }
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--accent-red);
+    letter-spacing: 0.5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    background-color: var(--input-bg);
+    color: var(--text-white);
+    box-sizing: border-box;
+    font-family: 'El Messiri', sans-serif;
+    font-size: 14px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--accent-red);
+    background-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 15px rgba(255, 82, 82, 0.25);
+    transform: translateY(-2px); /* حركة ارتفاع بسيطة عند التفاعل */
+}
+
+/* تخصيص السهم في القوائم المنسدلة */
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%23FF5252' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position: left 15px center;
+}
+
+/* نمط خيارات القائمة المنسدلة لتبدو داكنة في المتصفحات */
+select option {
+    background-color: #15102a;
+    color: var(--text-white);
+}
+
+.agreement-box {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 20px;
+    border-radius: 12px;
+    margin: 30px 0;
+    border-right: 4px solid var(--primary-red);
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    cursor: pointer;
+}
+
+.checkbox-group input {
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+    accent-color: var(--primary-red); /* تلوين مربع الاختيار تلقائياً */
+    cursor: pointer;
+}
+
+.agreement-text {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--text-muted);
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, var(--primary-red) 0%, #B71C1C 100%);
+    color: white;
+    border: none;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: 0 6px 20px rgba(211, 47, 47, 0.3);
+    transition: all 0.3s ease;
+    font-family: 'El Messiri', sans-serif;
+}
+
+.submit-btn:hover { 
+    background: linear-gradient(135deg, var(--accent-red) 0%, var(--primary-red) 100%);
+    box-shadow: 0 8px 25px rgba(255, 82, 82, 0.4);
+    transform: translateY(-2px);
+}
+
+.submit-btn:active {
+    transform: translateY(1px);
+}
+
+.submit-btn:disabled { 
+    background: #444 !important; 
+    box-shadow: none; 
+    cursor: not-allowed; 
+    transform: none !important;
+}
+
+#status-msg {
+    display: none; 
+    padding: 16px; 
+    margin-bottom: 30px; 
+    border-radius: 12px; 
+    text-align: center; 
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 1.6;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 650px) {
+    body { padding: 20px 12px; }
+    .container { padding: 30px 20px; border-radius: 16px; }
+    .form-grid { grid-template-columns: 1fr; gap: 18px; }
+    .full-width { grid-column: span 1; }
+    h1.main-title { font-size: 28px; }
+}

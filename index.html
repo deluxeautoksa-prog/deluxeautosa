@@ -1,0 +1,78 @@
+<div class="container">
+    <div class="header-section">
+        <h1 class="main-title">طلب الامتياز التجاري</h1>
+        <p class="intro-text">
+            نهنئكم على قراركم لتملك حقوق امتياز “دي لوكس اتو” في المملكة العربية السعودية ودول الخليج. تقييمكم الإيجابي لهذه فرصة يعني الكثير لنا ويسعدنا وصولكم إلى هذه الخطوة ونود التنويه بأن هذا النموذج لا يعتبر عقد امتياز. في هذه الصفحة تقومون باتخاذ الخطوة الأولى في عملية تعاقد الامتياز التجاري مع “دي لوكس اتو”.
+        </p>
+    </div>
+
+    <!-- نافذة تنبيهات الحالة -->
+    <div id="status-msg"></div>
+
+    <h2 class="form-subtitle">ابدأ رحلتك في الامتياز التجاري</h2>
+
+    <form id="franchiseForm">
+        <div class="form-grid">
+            <div class="form-group full-width">
+                <label>الاسم الكامل:</label>
+                <input type="text" name="name" required placeholder="أدخل اسمك الثلاثي">
+            </div>
+
+            <div class="form-group">
+                <label>الجوال (مع رمز الدولة):</label>
+                <input type="tel" name="phone" required placeholder="05xxxxxxxx أو +966..." dir="ltr">
+            </div>
+
+            <div class="form-group">
+                <label>البريد الإلكتروني:</label>
+                <input type="email" name="email" required placeholder="example@domain.com">
+            </div>
+
+            <div class="form-group">
+                <label>الجنسية:</label>
+                <input type="text" name="nationality" required placeholder="أدخل جنسيتك">
+            </div>
+
+            <div class="form-group">
+                <label>الدولة المستهدفة للامتياز:</label>
+                <select name="country" required>
+                    <option value="" disabled selected>اختر الدولة...</option>
+                    <option value="المملكة العربية السعودية">المملكة العربية السعودية</option>
+                    <option value="الإمارات العربية المتحدة">الإمارات العربية المتحدة</option>
+                    <option value="الكويت">الكويت</option>
+                    <option value="قطر">قطر</option>
+                    <option value="سلطنة عمان">سلطنة عمان</option>
+                    <option value="البحرين">البحرين</option>
+                    <option value="أخرى">دولة أخرى</option>
+                </select>
+            </div>
+
+            <div class="form-group full-width">
+                <label>المدينة / المنطقة المستهدفة:</label>
+                <input type="text" name="city" required placeholder="أدخل اسم المدينة أو المنطقة التي ترغب بالاستثمار فيها">
+            </div>
+
+            <div class="form-group full-width">
+                <label>رأس المال الاستثماري المتوقع ورغبتك (اختياري):</label>
+                <select name="investment_capital">
+                    <option value="" selected>اختر النطاق التمويلي المتاح...</option>
+                    <option value="أقل من 300 ألف ريال">أقل من 300,000 ريال</option>
+                    <option value="300 ألف إلى 500 ألف ريال">300,000 - 500,000 ريال</option>
+                    <option value="500 ألف إلى مليون ريال">500,000 - 1,000,000 ريال</option>
+                    <option value="أكثر من مليون ريال">أكثر من 1,000,000 ريال</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="agreement-box">
+            <label class="checkbox-group">
+                <input type="checkbox" name="agreement" required>
+                <span class="agreement-text">
+                    أقر بأن الغرض من هذا النموذج هو لتقديم المعلومات فقط ولا يشكل أي التزامات على "دي لوكس اتو السعودية"، مانح الامتياز ("شركة نمط" الوكيل الحصري في المملكة العربية السعودية) ولا عليّ (المتقدم بطلب الحصول على الامتياز). كما أوافق على منح "دي لوكس اتو السعودية" صلاحية الاتصال بالأشخاص المذكورة بياناتهم كمرجع وأقر بصحة المعلومات في هذا الطلب.
+                </span>
+            </label>
+        </div>
+
+        <button type="submit" id="submitBtn" class="submit-btn">رفع الطلب</button>
+    </form>
+</div>
